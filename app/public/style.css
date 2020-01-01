@@ -6,3 +6,7 @@ body {
 .jumbotron {
     background-color: silver;
 }
+
+h1 {
+    font-size: 65px;
+}
