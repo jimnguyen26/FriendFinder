@@ -13,3 +13,12 @@ body {
 h1 {
     font-size: 65px;
 }
+
+.btn1 {
+    color: black;
+    background-color: white;
+}
+
+.form-control1 {
+    width: 20%;
+}
