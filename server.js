@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static("./app/public"));
 
 const apiRoutes = require("./app/routing/apiRoutes");
-app.use("/api", apiRoutes);
+app.use("/", apiRoutes);
 
 const htmlRoutes = require("./app/routing/htmlRoutes");
 app.use("/", htmlRoutes);
