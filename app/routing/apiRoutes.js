@@ -3,14 +3,39 @@ const router = express.Router();
 const friends = require("../data/friends");
 
 router.get("/api/friends", (req, res) => {
-    // console.log("hit our server");
+    console.log("hit our server");
     res.send(friends);
 });
 
+router.post("/api/friends", (req, res) => {
+    console.log(req.body.scores);
 
-// router.get("/api/friends", (req, res) => {
-//     res.send(friends);
-// });
+    var user = req.body;
 
+    for (var i = 0; i < user.scores.length; i++) {
+        user.scores[i] = parseInt(user.scores[i]);
+    };
+
+    var bestFriendIndex = 0;
+    var minimumDifference = 40;
+
+    for(var i = 0; i < friends.length; i++) {
+        var totalDifference = 0;
+        for(var j = 0; j < friends[i].scores.length; j++) {
+          var difference = Math.abs(user.scores[j] - friends[i].scores[j]);
+          totalDifference += difference;
+        }
+
+        if(totalDifference < minimumDifference) {
+            bestFriendIndex = i;
+            minimumDifference = totalDifference;
+          }
+        }
+
+        friends.push(user);
+
+        res.json(friends[bestFriendIndex]);
+  
+});
 
 module.exports = router;

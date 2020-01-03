@@ -8,4 +8,10 @@ router.get("/", (req, res) => {
     
 });
 
+router.get("/survey", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public.survey.html"));
+    console.log("working???");
+    
+});
+
 module.exports = router;
