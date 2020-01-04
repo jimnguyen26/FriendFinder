@@ -7,7 +7,7 @@ body {
 }
 
 .jumbotron2 {
-    background-color: white;
+    background-color: silver;
 }
 
 h1 {
@@ -21,4 +21,9 @@ h1 {
 
 .form-control1 {
     width: 20%;
+}
+
+#resultsModal img {
+    overflow: hidden;
+    width: 400px;
 }

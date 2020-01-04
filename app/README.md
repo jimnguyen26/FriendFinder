@@ -1,0 +1,1 @@
+Hello and welcome to Friend Finder App! This app is a survey that matches you with your favorite actor/actress!  Enter your name and a link to a photo of yourself to join in the on the fun!  
